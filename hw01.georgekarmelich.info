@@ -1,0 +1,19 @@
+#This code  is based on the code from Nat Tuck and the nginx template, modified for my domain.
+#http://www.ccs.neu.edu/home/ntuck/courses/2018/01/cs4550/notes/02-web-tech/notes.html 
+
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /home/gkarmelich/www/main/;
+
+        index hw01.html;
+
+        server_name hw01.georgekarmelich.info;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+
+}
+
